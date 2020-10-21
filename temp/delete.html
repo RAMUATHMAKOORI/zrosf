@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3>Delete the Data</h3><br>
+<h3></h3><br>
+<form action='delt' method='POST'>
+{% csrf_token %}
+<table>
+<tr><th>year</th><td> <input type='number' max='2019'min='1960' name='year'></td></tr>
+<tr><th>phone number</th><td> <input type='tel'pattern="[7-9]{1}[0-9]{9}"name='tel'></td></tr></table>
+<input type='submit'></form>
+{% endblock %}

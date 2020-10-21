@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<form action='chnm' method='POST'>
+{% csrf_token %}
+<table>
+<tr><th>year</th><td> <input type='number' max='2019'min='1960' name='year'></td></tr>
+<tr><th>phone number</th><td> <input type='tel'pattern="[7-9]{1}[0-9]{9}"name='tel'></td></tr>
+
+<tr><th>Enter New Name</th><td> <input type='text' name='name'></td></tr></table>
+<input type='submit'></form>
+{% endblock %}

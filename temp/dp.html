@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>ZPSS Raghunadhapalem</h2>
+<h4>SSC-{{s1}}</h4>
+<table class="ad">
+<tr><th><h5>Names<h5></th>
+<th>phone no</th></tr>
+{% for a1 in a %}
+<tr>
+<td class="ad">{{a1.name}}</td><td class="ad">{{a1.phone}}</td>
+</tr>
+
+{% endfor %}
+</table>
+<button onclick="myFunction()">Print</button>
+ {% for message in messages %}
+            <h3> {{message}}  </h3>
+            {% endfor %}
+
+<script>
+function myFunction() {
+  window.print();
+}
+</script>
+{% endblock %}

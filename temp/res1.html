@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3>Searching Data Yearwise</h3><br>
+<form action='dp1' method='POST'>
+{% csrf_token %}
+<h1>year <input type='number' max='2019'min='1960' name='year'><br><h1>
+
+<input type='submit' value='data'></form>
+{% for message in messages %}
+            <h3> {{message}}  </h3>
+            {% endfor %}
+{% endblock %}
